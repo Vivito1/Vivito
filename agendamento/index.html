@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviços</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logoBarber.png" type="image/x-icon">
+</head>
+<body>
+    <img src="/img/fundoAgenda.jpg" alt="fundoAgenda" id="fundoAgenda">
+    <div class="cabeçalho">
+        <p class="txtCabeçalho">Ligue pra nós: +55 (99) 9 9999-9999</p>
+        <div class="cabeçalhoMidias">
+            <img src="/img/instagram.svg" alt="instagram" class="iconeInstagram">
+            <img src="/img/facebook.svg" alt="facebook" class="iconeFacebook">
+            <img src="/img/whatsapp.png" alt="whatsapp" class="iconeWhatsapp">
+        </div>
+    </div>
+
+    <div class="navegaçao">
+        <img src="/img/logoBarber.png" alt="logoBarber" class="logoBarber">
+        <a href="/index01.html" class="inicio" >INÍCIO</a>
+        <a href="/agendamento/index.html" class="agendar">AGENDAR</a>
+        <a href="/index01.html" class="produtos">PRODUTOS</a>
+        <a href="/QuemSomos/quemSomos.html" class="serviços">QUEM SOMOS</a>
+        <a href="/index01.html" class="localizacao">LOCALIZAÇÃO</a>
+    
+    </div>
+
+    <div id="calendar-container">
+        <div id="calendarTitle">
+            <button id="prevMonth">&lt;</button>
+            <span id="monthYear"></span>
+            <button id="nextMonth">&gt;</button>
+        </div>
+        <div id="calendar"></div>
+    </div>
+
+    <div id="timeSlots">
+        <span class="close-btn" id="closeTimeSlots">&times;</span>
+        <h2 id="titulohorarios" >Horários Disponíveis</h2>
+        <ul id="slotsList"></ul>
+    </div>
+
+    <div id="appointmentModal">
+        <span class="close-btn" id="closeAppointmentModal">&times;</span>
+        <h2 id="tituloagendarhorarios" >Agendar Horário</h2>
+        <form id="appointmentForm">
+            <input type="text" name="name" placeholder="Seu Nome:" required />
+            <input type="text" name="phone" placeholder="Seu Telefone:" required />
+            
+            <div>
+                <label id="txtServicosoferecidos">Serviços Oferecidos:</label>
+                <label id="txtcabelo">Cabelo<input type="checkbox" name="service" value="Cabelo" id="cabelo"></label>
+                <label id="txtsobrancelha">Sobrancelha<input type="checkbox" name="service" value="Sobrancelha" id="Sobrancelha"></label>
+                <label id="txtbarba">Barba<input type="checkbox" name="service" value="Barba" id="barba"></label>
+            </div>
+            <button type="submit" id="agendarBtn">AGENDAR</button>
+        </form>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeConfirmationModal">&times;</span>
+            <h2>Agendamento Confirmado</h2>
+            <p>Seu horário foi agendado com sucesso!</p>
+            <div class="modal-actions">
+                <button id="okConfirmation">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteConfirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeDeleteConfirmationModal">&times;</span>
+            <h2>Confirmar Exclusão</h2>
+            <p>Você tem certeza que deseja excluir seu horário?</p>
+            <div class="modal-actions">
+                <button id="confirmDelete">Excluir</button>
+                <button id="cancelDelete">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

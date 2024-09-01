@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Web</title>
+    <link rel="stylesheet" href="quemSomos.css">
+    <link rel="icon" href="/img/logoBarber.png" type="image/x-icon">
+</head>
+<body>
+    <div class="cabeçalho">
+        <p class="txtCabeçalho">Ligue pra nós: +55 (99) 9 9999-9999</p>
+        <div class="cabeçalhoMidias">
+            <img src="/img/instagram.svg" alt="instagram" class="iconeInstagram">
+            <img src="/img/facebook.svg" alt="facebook" class="iconeFacebook">
+            <img src="/img/whatsapp.png" alt="whatsapp" class="iconeWhatsapp">
+        </div>
+    </div>
+
+    <div class="navegaçao">
+        <img src="/img/logoBarber.png" alt="logoBarber" class="logoBarber">
+        <a href="/index01.html" class="inicio">INÍCIO</a>
+        <a href="/agendamento/index.html" class="agendar">AGENDAR</a>
+        <a href="/index01.html" class="produtos">PRODUTOS</a>
+        <a href="#" class="serviços" onclick="recarregarPagina()">QUEM SOMOS</a>
+        <a href="#" class="localizacao">LOCALIZAÇÃO</a>
+    </div>
+
+    <div class="slideshow-container">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="mySlides">
+            <img src="/img/estabelecimento1" alt="estabelecimento1">
+        </div>
+        <div class="mySlides">
+            <img src="/img/estabelecimento2" alt="estabelecimento2">
+        </div>
+        <div class="mySlides">
+            <img src="/img/estabelecimento3" alt="estabelecimento3">
+        </div>
+        <div class="mySlides">
+            <img src="/img/estabelecimento4" alt="estabelecimento4">
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div id="quemSomosTxt">
+        <h1 id="tituloQuemSomos">Quem Somos?</h1>
+        <p id="txtQuemSomos1">Nesse espaço aqui, você pode registrar momentos, histórias da sua barbearia e muito mais. Conte como tudo começou, as dificuldades e conquistas que moldaram o que somos hoje. Compartilhe anedotas dos clientes fiéis e as novas amizades que surgem a cada dia. Relate momentos especiais, como o primeiro corte de cabelo de um cliente jovem ou uma transformação marcante.</p>
+        <p id="txtQuemSomos2">Celebre as tradições que mantemos vivas, as inovações que adotamos e a dedicação que colocamos em cada serviço. Destaque os eventos que organizamos, as colaborações com negócios locais e o impacto positivo que buscamos causar. Compartilhe nossas visões para o futuro e os sonhos que ainda queremos realizar.</p>
+        <p id="txtQuemSomos3">Ao registrar esses momentos e histórias, você ajuda a construir um legado que será lembrado por todos que fizerem parte da nossa jornada. Este espaço é para celebrar o passado, viver o presente e sonhar com o futuro da nossa barbearia.</p>
+    </div>
+
+    <div id="equipe">
+        <h1 id="tituloEquipe">Nossa Equipe</h1>
+        <div id="Equipe1">
+            <img src="/img/Equipe1" alt="imgEquipe1" id="imgEquipe1">
+            <button class="open-modal" data-modal="modalPessoa1" id="btnPessoa1">SOBRE PESSOA 1</button>
+        </div>
+
+        <div id="Equipe2">
+            <img src="/img/Equipe2" alt="imgEquipe2" id="imgEquipe2">
+            <button class="open-modal" data-modal="modalPessoa2" id="btnPessoa2">SOBRE PESSOA 2</button>
+        </div>
+
+        <div id="Equipe3">
+            <img src="/img/Equipe3" alt="imgEquipe3" id="imgEquipe3">
+            <button class="open-modal" data-modal="modalPessoa3" id="btnPessoa3">SOBRE PESSOA 3</button>
+        </div>
+        <img src="/img/fundoLocalizaçao.png" alt="fundoEquipe" id="fundoEquipe">
+    </div>
+
+    <!-- Modal Pessoa 1 -->
+    <div id="modalPessoa1" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modalPessoa1">&times;</span>
+            <img src="/img/Equipe1" alt="imgequipeModal1" id="imgequipeModal1">
+            <div id="modal1">
+                <p id="nomeModal1">Nome:Registre seu nome aqui!</p>
+                <p id="habilidadeModal1">HABILIDADE:Registre sua habilidade aqui!</p>
+                <p id="caracteristicaModal1">CARACTERÍSTICA:Registre suas caracteristicas em meio ao serviço!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pessoa 2 -->
+    <div id="modalPessoa2" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modalPessoa2">&times;</span>
+            <img src="/img/Equipe2" alt="imgequipeModal2" id="imgequipeModal2">
+            <div id="modal2">
+                <p id="nomeModal2">Nome:Registre seu nome aqui!</p>
+                <p id="habilidadeModal2">HABILIDADE:Registre sua habilidade aqui!</p>
+                <p id="caracteristicaModal2">CARACTERÍSTICA:Registre suas caracteristicas em meio ao serviço!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pessoa 3 -->
+    <div id="modalPessoa3" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="modalPessoa3">&times;</span>
+            <img src="/img/Equipe3" alt="imgequipeModal3" id="imgequipeModal3">
+            <div id="modal3">
+                <p id="nomeModal3">Nome:Registre seu nome aqui!</p>
+                <p id="habilidadeModal3">HABILIDADE:Registre sua habilidade aqui!</p>
+                <p id="caracteristicaModal3">CARACTERÍSTICA:Registre suas caracteristicas em meio ao serviço!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="fundoLocSobre">
+        <h1 id="tituloLoc">SUA LOCALIZAÇÃO AQUI!</h1>
+        <img src="/img/fundoLocSobre.png" alt="fundoLocSobre" id="fundoLocSobre">
+        <img src="/img/logoBarber.png" alt="logoBarberSobre" id="logoBarberSobre">
+        <div id="endereçosSobre">
+            <img id="imgComputador" src="/img/imgcomputador.png" alt="imagempc">
+
+            <iframe id="localizaçaoMap"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.018632244131!2d-122.406417684681!3d37.78583417975769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f6c8b1eb%3A0x8f09014cdbb5b13b!2sTwitter!5e0!3m2!1sen!2sus!4v1614208274048!5m2!1sen!2sus"></iframe>
+            </iframe>
+        </div>
+
+        <div id="endereçoLoc">
+            <p id="endereço">ENDEREÇO: O bairro do sua barbearia aqui.</p>
+            <p id="rua">RUA: Rua e número da sua barbearia aqui.</p>
+            <button id="wppLoc">Whatsapp</button>
+            <img src="/img/whatsapp.png" alt="wppIconeLoc" id="wppIconeLoc">
+        </div>
+    </div>
+
+    <script src="quemSomos.js"></script>
+</body>
+</html>

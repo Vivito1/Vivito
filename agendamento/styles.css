@@ -1,0 +1,461 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #292828;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.cabeçalho {
+    background-color: rgb(161, 39, 65);
+    position: absolute;
+    display: flex;
+    height: 5vh;
+    width: 101%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    top: 0vh;
+}
+
+#fundoAgenda {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+}
+
+.cabeçalhoMidias {
+    display: flex;
+    gap: 15px;
+}
+
+.iconeInstagram,
+.iconeFacebook {
+    width: 25px;
+    cursor: pointer;
+    position: relative;
+    left: -99%;
+}
+
+.iconeWhatsapp {
+    width: 8vh;
+    position: relative;
+    left: -21vh;
+    cursor: pointer;
+    height: 4vh;
+}
+
+.txtCabeçalho {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    left: 40%;
+}
+
+.navegaçao {
+    background-color: rgb(34, 34, 70);
+    height: 15vh;
+    width: 80%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10%;
+    top: 5vh;
+}
+
+.logoBarber {
+    width: 12%;
+    height: auto;
+    position: relative;
+    top: 18%;
+}
+
+.navegaçao a {
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#calendar-container {
+    top: 7vh;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.disabled {
+    color: #aaa;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#calendarTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#calendarTitle button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+#calendarTitle button:hover {
+    color: #0056b3;
+}
+
+#prevMonth {
+    position: absolute;
+    left: 0;
+}
+
+#nextMonth {
+    position: absolute;
+    right: 0;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day-header {
+    display: contents;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    background: #f0f0f0;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.day {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.day:hover {
+    background: #f9f9f9;
+    transform: scale(1.05);
+}
+
+.day.booked {
+    background: #f8d7da;
+    color: #721c24;
+    cursor: not-allowed;
+}
+
+.day.past-day {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.day.current-day {
+    background: #d1ecf1;
+    color: #0c5460;
+    font-weight: bold;
+}
+
+#timeSlots, #appointmentModal, #confirmationModal, #deleteConfirmationModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 10;
+}
+
+#appointmentModal {
+    height: 50vh;
+}
+
+#titulohorarios {
+    left: 12vh;
+    position: relative;
+}
+
+#slotsList {
+    cursor: pointer;
+}
+
+#tituloagendarhorarios {
+    left: 15vh;
+    position: relative;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-actions button:hover {
+    background: #ddd;
+}
+
+#txtServicosoferecidos {
+    position: absolute;
+    left: 12.5vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.6vh;
+}
+
+#cabelo, #Sobrancelha, #barba {
+    position: absolute;
+    left: -0vh;
+    height: 3vh;
+    top: 2.5vh;
+}
+
+#txtcabelo {
+    position: absolute;
+    top: 37vh;
+    left: 10vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6vh;
+}
+
+#txtsobrancelha {
+    position: absolute;
+    top: 37vh;
+    left: 23vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6vh;
+}
+
+#txtbarba {
+    position: absolute;
+    top: 37vh;
+    left: 43vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6vh;
+}
+
+#agendarBtn {
+    position: absolute;
+    top: 47vh;
+    left: 23vh;
+    background-color: green;
+    color: white;
+    border: solid 2px white;
+    border-radius: 1vh;
+    font-size: 2.4vh;
+    font-weight: bold;
+    height: 4vh;
+    width: 18vh;
+    cursor: pointer;
+}
+
+#okConfirmation {
+    background: #4CAF50;
+    color: white;
+}
+
+#okConfirmation:hover {
+    background: #45A049;
+}
+
+#confirmDelete {
+    background: #f44336;
+    color: white;
+}
+
+#confirmDelete:hover {
+    background: #d32f2f;
+}
+
+#cancelDelete {
+    background: #ddd;
+    color: black;
+}
+
+#cancelDelete:hover {
+    background: #ccc;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#appointmentForm {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#appointmentForm div {
+    margin-bottom: 10px;
+}
+
+#appointmentForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#appointmentForm input,
+#appointmentForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.available-label {
+    color: green;
+}
+
+.booked-label {
+    color: red;
+}
+
+/* Estilização atualizada para o modal de horários disponíveis */
+#timeSlots {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 10;
+    border: 2px solid #fdfdfd; /* Borda azul */
+}
+
+#timeSlots h2 {
+    text-align: center;
+    color: #000000; /* Azul */
+    margin-bottom: 20px;
+}
+
+#slotsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#slotsList li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#slotsList li:hover {
+    background: #f9f9f9;
+    transform: scale(1.05);
+}
+
+#slotsList li.booked {
+    background: #f8d7da;
+    color: #721c24;
+    cursor: not-allowed;
+}
+
+#slotsList li.available {
+    background: #d4edda;
+    color: #155724;
+    cursor: pointer;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px;
+    background: #fdfdfd;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-footer {
+    border-top: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-footer button:hover {
+    background: #ddd;
+}
+
+#timeSlots .modal-content {
+    position: relative;
+}

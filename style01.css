@@ -1,0 +1,862 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.884);
+    overflow-x: hidden;
+    max-height: 200vh;
+}
+
+.cabeçalho {
+    background-color: rgb(161, 39, 65);
+    position: relative;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.cabeçalhoMidias {
+    display: flex;
+    gap: 15px;
+}
+
+.iconeInstagram,
+.iconeFacebook {
+    width: 25px;
+    cursor: pointer;
+    position: relative;
+    left: -99%;
+}
+
+.iconeWhatsapp {
+    width: 8vh;
+    position: relative;
+    left: -21vh;
+    cursor: pointer;
+    height: 4vh;
+}
+
+.txtCabeçalho {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    left: 40%;
+}
+
+.navegaçao {
+    background-color: rgb(34, 34, 70);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10%;
+}
+
+.logoBarber {
+    width: 12%;
+    height: auto;
+    position: relative;
+    top: 18%;
+}
+
+.navegaçao a {
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 70vh; /* Ajuste conforme necessário */
+}
+
+.mySlides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySlides.active {
+    left: 0;
+    opacity: 1;
+}
+
+.mySlides.exit {
+    left: -100%;
+    opacity: 0;
+}
+
+.slideshow-container-new {
+    position: relative;
+    width: 80%; /* Reduz a largura para 80% */
+    margin: auto; /* Centraliza o carrossel na tela */
+    height: 60vh;
+    margin-top: 135vh; /* Espaço entre seções */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.mySlides-new {
+    flex: 0 0 60vh; /* Largura fixa para cada slide */
+    height: 60vh;
+    margin-right: 5vh; /* Espaço entre as imagens */
+}
+
+.mySlides-new img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2vh; /* Adiciona bordas arredondadas às imagens */
+}
+
+.prev-new,
+.next-new {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8); /* Adiciona um fundo às setas para melhor contraste */
+}
+
+.next-new {
+    right: 0;
+}
+
+.prev-new:hover,
+.next-new:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#fundoEquipe {
+    height: 85vh;
+    width: 100%;
+    position: absolute;
+    top: none;
+}
+
+#tituloEquipe {
+    color: rgb(0, 0, 0);
+    height: 40vh;
+    z-index: 10;
+    width: 200vh;
+    position: absolute;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6vh;
+    left: 43vh;
+}
+
+#Equipe {
+    width: 200vh;
+    position: absolute;
+    top: 110vh;
+}
+
+#equipe1 {
+    width: 30vh;
+    position: absolute;
+    top: 22vh;
+    left: 20vh;
+    border-radius: 2vh;
+}
+
+#equipe2 {
+    width: 30vh;
+    position: absolute;
+    top: 22vh;
+    left: 80vh;
+    border-radius: 2vh;
+}
+
+#equipe3 {
+    width: 30vh;
+    position: absolute;
+    top: 22vh;
+    left: 140vh;
+    border-radius: 2vh;
+}
+
+#botaoversobre1 {
+    z-index: 100;
+    position: absolute;
+    top: 70vh;
+    left: 24.5vh;
+    background-color: rgb(22, 22, 112);
+    color: white;
+    border: solid 2px;
+    border-radius: 1vh;
+    width: 20vh;
+    height: 8vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+#botaoversobre2 {
+    z-index: 100;
+    position: absolute;
+    top: 70vh;
+    left: 86vh;
+    background-color: rgb(22, 22, 112);
+    color: white;
+    border: solid 2px;
+    border-radius: 1vh;
+    width: 20vh;
+    height: 8vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+#botaoversobre3 {
+    z-index: 100;
+    position: absolute;
+    top: 70vh;
+    left: 146vh;
+    background-color: rgb(22, 22, 112);
+    color: white;
+    border: solid 2px;
+    border-radius: 1vh;
+    width: 20vh;
+    height: 8vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+#agendarBtn {
+    z-index: 3;
+    position: absolute;
+    top: 95vh;
+    left: 75vh;
+    background-color: rgb(165, 4, 4);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+    border: solid 2px;
+    border-radius: 1vh;
+    height: 6vh;
+    cursor: pointer;
+}
+
+#tituloAntesDepois{
+    position: absolute;
+    top: 202vh; 
+    font-size: 5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    z-index: 3;
+    left: 55vh;
+    color: white;
+}
+
+#tituloProdutos{
+    position: absolute;
+    top: 305vh;
+    left: 65vh;
+    color: white;
+    font-size: 6vh;
+}
+
+/*PRODUTO1*/
+
+#imgProduto1{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 330vh;
+    left: 20vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto1{
+    position: absolute;
+    top: 330.5vh;
+    background-color: white;
+    height: 7vh;
+    left: 20vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#comprar1{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo1{
+    position: absolute;
+    left: 11vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+}
+
+/*PRODUTO2*/
+
+#imgProduto2{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 330vh;
+    left: 60vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto2{
+    position: absolute;
+    top: 330.5vh;
+    background-color: white;
+    height: 7vh;
+    left: 60vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar2{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo2{
+    position: absolute;
+    left: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+    font-size: 2.2vh;
+    width: 40vh;
+}
+
+/*PRODUTO3*/
+
+#imgProduto3{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 330vh;
+    left: 100vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto3{
+    position: absolute;
+    top: 330.5vh;
+    background-color: white;
+    height: 7vh;
+    left: 100vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar3{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo3{
+    position: absolute;
+    left: 9vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+}
+
+/*PRODUTO4*/
+
+#imgProduto4{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 330vh;
+    left: 140vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto4{
+    position: absolute;
+    top: 330.5vh;
+    background-color: white;
+    height: 7vh;
+    left: 140vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar4{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo4{
+    position: absolute;
+    left: 6vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+}
+
+/*PRODUTO5*/
+
+#imgProduto5{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 390vh;
+    left: 140vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto5{
+    position: absolute;
+    top: 390vh;
+    background-color: white;
+    height: 7vh;
+    left: 140vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar5{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo5{
+    position: absolute;
+    left: 4.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+    width: 25vh;
+}
+
+/*PRODUTO6*/
+
+#imgProduto6{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 390vh;
+    left: 100vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto6{
+    position: absolute;
+    top: 390vh;
+    background-color: white;
+    height: 7vh;
+    left: 100vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar6{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo6{
+    position: absolute;
+    left: 4.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+    width: 25vh;
+}
+
+/*PRODUTO7*/
+
+#imgProduto7{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 390vh;
+    left: 60vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto7{
+    position: absolute;
+    top: 390vh;
+    background-color: white;
+    height: 7vh;
+    left: 60vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar7{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo7{
+    position: absolute;
+    left: 5.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+    width: 30vh;
+}
+
+/*Produto8*/
+
+#imgProduto8{
+    position: absolute;
+    width: 33vh;
+    height: 50vh;
+    top: 390vh;
+    left: 20vh;
+    border-radius: 2vh;
+    border: solid 4px white;
+    cursor: pointer;
+}
+
+#tituloProduto8{
+    position: absolute;
+    top: 390vh;
+    background-color: white;
+    height: 7vh;
+    left: 20vh;
+    width: 34vh;
+    border-radius: 2vh;
+    cursor: pointer;
+}
+
+#comprar8{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    left: 3vh;
+    top: -1.5vh;
+    cursor: pointer;
+}
+
+#titulo8{
+    position: absolute;
+    left: 11vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    top: 2vh;
+    cursor: pointer;
+    width: 30vh;
+}
+
+#fundoLocalizaçao{
+    position: absolute;
+    top: 480vh;
+    width: 100%;
+    height: 45vh;
+}
+
+#localizaçaoMap{
+    position: absolute;
+    top: 480vh;
+    left: 137vh;
+    height: 50vh;
+    width: 27vh;
+    z-index: 6;
+    border-radius: 1vh;
+}
+
+#celular{
+    position: absolute;
+    top: 475vh;
+    left: 130vh;
+    height: 60vh;
+}
+
+#tituloLocalizaçao{
+    position: absolute;
+    top: 480vh;
+    color: white;
+    font-size: 5vh;
+    font-weight: bold;
+    left: 15vh;
+}
+
+#traçoBarberPole{
+    position: absolute;
+    top: 464vh;
+    width: 150vh;
+    left: -12.5vh;
+
+}
+
+#endereço{
+    position: absolute;
+    top: 495vh;
+    left: 15vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+#rua{
+    position: absolute;
+    top: 502vh;
+    left: 15vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+#wppLoc{
+    position: absolute;
+    top: 512vh;
+    left: 35vh;
+    color: white;
+    background-color: green;
+    border-radius: 1vh;
+    border: solid 2px;
+    padding: 0 5px 0 60px;
+    height: 6vh;
+    font-size: 2.2vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#wppIconeLoc{
+    position: absolute;
+    top: 513vh;
+    width: 10vh;
+    left: 36vh;
+    cursor: pointer;
+}
+
+
+/* Estilo dos Modais */
+/* Estilos gerais dos modais */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000; /* Fica acima do conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo semi-transparente */
+}
+
+/* Estilos do conteúdo do modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza verticalmente e horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima do modal */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do modal */
+    z-index: 1000;
+    height: 30vh;
+}
+
+/* Estilos do botão de fechar */
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Muda a cor do botão de fechar ao passar o mouse */
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#imgequipeModal1{
+    position: absolute;
+    width: 22vh;
+    left: 57vh;
+    top: 30vh;
+}
+
+#nomeModal1{
+    position: absolute;
+    top: 33vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#habilidadeModal1{
+    position: absolute;
+    top: 40.5vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#caracteristicaModal1{
+    position: absolute;
+    top: 48vh;
+    left: 82vh;
+    width: 50vh;
+    font-weight: bold;
+
+}
+
+#imgequipeModal2{
+    position: absolute;
+    width: 22vh;
+    left: 57vh;
+    top: 30vh;
+}
+
+#nomeModal2{
+    position: absolute;
+    top: 33vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#habilidadeModal2{
+    position: absolute;
+    top: 40.5vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#caracteristicaModal2{
+    position: absolute;
+    top: 48vh;
+    left: 82vh;
+    width: 50vh;
+    font-weight: bold;
+    
+}
+
+#imgequipeModal3{
+    position: absolute;
+    width: 22vh;
+    left: 57vh;
+    top: 30vh;
+}
+
+#nomeModal3{
+    position: absolute;
+    top: 33vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#habilidadeModal3{
+    position: absolute;
+    top: 40.5vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#caracteristicaModal3{
+    position: absolute;
+    top: 48vh;
+    left: 82vh;
+    width: 50vh;
+    font-weight: bold;
+
+}
+
+

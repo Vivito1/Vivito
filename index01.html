@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Web</title>
+    <link rel="stylesheet" href="style01.css">
+    <link rel="icon" href="img/logoBarber.png" type="image/x-icon">
+</head>
+<body>
+    <div class="cabeçalho">
+        <p class="txtCabeçalho">Ligue pra nós: +55 (99) 9 9999-9999</p>
+        <div class="cabeçalhoMidias">
+            <img src="img/instagram.svg" alt="instagram" class="iconeInstagram">
+            <img src="img/facebook.svg" alt="facebook" class="iconeFacebook">
+            <img src="img/whatsapp.png" alt="whatsapp" class="iconeWhatsapp">
+        </div>
+    </div>
+
+    <div class="navegaçao">
+        <img src="img/logoBarber.png" alt="logoBarber" class="logoBarber">
+        <a  class="inicio" onclick="recarregarPagina()">INÍCIO</a>
+        <a href="agendamento/index.html" class="agendar">AGENDAR</a>
+        <a href="#" class="produtos">PRODUTOS</a>
+        <a href="QuemSomos/quemSomos.html" class="serviços">QUEM SOMOS</a>
+        <a href="#" class="localizacao">LOCALIZAÇÃO</a>
+    </div>
+
+    <!-- Slideshow Original -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="img/banner1.png" alt="banner1">
+        </div>
+        <div class="mySlides">
+            <img src="img/banner2.png" alt="banner2">
+        </div>
+        <div class="mySlides">
+            <img src="img/banner3.png" alt="banner3">
+        </div>
+        <div class="mySlides">
+            <img src="img/banner4.png" alt="banner4">
+        </div>
+    </div>
+
+    <div id="Equipe">
+        <p id="tituloEquipe">MOSTRE OS SEUS PROFISSIONAIS</p>
+        <img src="img/fundoEquipe.png" alt="equipe" id="fundoEquipe">
+        <div class="Equipe1">   
+            <img src="img/equipe1" alt="equipe1" id="equipe1">
+            <button id="botaoversobre1">VER SOBRE</button>
+        </div>
+        
+        <div class="Equipe2">
+            <img src="img/equipe2" alt="equipe2" id="equipe2">
+            <button id="botaoversobre2">VER SOBRE</button>
+        </div>
+        
+        <div class="Equipe3">
+            <img src="img/equipe3" alt="equipe3" id="equipe3">
+            <button id="botaoversobre3">VER SOBRE</button>
+        </div>
+    </div>
+    
+    <div id="agendar">
+        <button href="agendamento/index.html" id="agendarBtn"  >AGENDE SEU HORÁRIO AQUI</button>
+    </div>
+    
+    <p id="tituloAntesDepois">ANTES E DEPOIS DO SEU SERVIÇO</p>
+
+    <!-- Novo Carrossel de Imagens -->
+    <div class="slideshow-container-new">
+        <div class="slides-wrapper">
+            <div class="mySlides-new">
+                <img src="img/antes1.jpg" alt="antes1">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes2.jpg" alt="antes2">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes3.jpg" alt="antes3">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes4.jpg" alt="antes4">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes5.jpg" alt="antes5">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes6.jpg" alt="antes6">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes7.jpg" alt="antes7">
+            </div>
+            <!-- Duplicar as imagens para o carrossel infinito -->
+            <div class="mySlides-new">
+                <img src="img/antes1.jpg" alt="antes1">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes2.jpg" alt="antes2">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes3.jpg" alt="antes3">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes4.jpg" alt="antes4">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes5.jpg" alt="antes5">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes6.jpg" alt="antes6">
+            </div>
+            <div class="mySlides-new">
+                <img src="img/antes7.jpg" alt="antes7">
+            </div>
+        </div>
+        <!-- Setas de Navegação -->
+        <a class="prev-new" onclick="plusSlidesNew(-1)">&#10094;</a>
+        <a class="next-new" onclick="plusSlidesNew(1)">&#10095;</a>
+    </div>
+
+    <div id="Produtos">
+        <h1 id="tituloProdutos">SEUS PRODUTOS AQUI</h1>
+        <div id="produto1">
+            <img src="img/produto1.jpeg" alt="produto1" id="imgProduto1">
+            <div id="tituloProduto1">
+                <p id="comprar1"><a href="https://wa.me/5531997941735?text=Quero%20comprar%20o%20produto%20Minoxidil" target="_blank">CLIQUE PRA COMPRAR</a></p>
+                <p id="titulo1">MINOXIDIL</p>
+            </div>
+        </div>
+
+        <div id="produto2">
+            <img src="img/produto2.jpeg" alt="produto2" id="imgProduto2">
+            <div id="tituloProduto2">
+                <p id="comprar2"><a href="https://wa.me/5531997941735?text=Quero%20comprar%20o%20produto%20Kit%20Perfeito%20de%20Maquinas" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo2">KIT PERFEITO DE MAQUINAS</p>
+            </div>
+        </div>
+
+        <div id="produto3">
+            <img src="img/produto3.jpeg" alt="produto3" id="imgProduto3">
+            <div id="tituloProduto3">
+                <p id="comprar3"><a href="https://wa.me/5531997941735?text=Quero%20comprar%20o%20produto%20Pente%20Garfo" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo3">PENTE GARFO</p>
+            </div>
+        </div>
+
+        <div id="produto4">
+            <img src="img/produto4.jpg" alt="produto4" id="imgProduto4">
+            <div id="tituloProduto4">
+                <p id="comprar4"><a href="https://wa.me/5531997941735?text=Quero%20comprar%20a%20Loção%20pra%20Barba" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo4">LOÇÃO PRA BARBA</p>
+            </div>
+        </div>
+
+        <div id="produto5">
+            <img src="img/produto5.jpg" alt="produto5" id="imgProduto5">
+            <div id="tituloProduto5">
+                <p id="comprar5"><a href="https://wa.me/5531997941735?text=Quero%20comprar%20a%20Loção%20pra%20Cabelo" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo5">LOÇÃO PRA CABELO</p>
+            </div>
+        </div>
+
+        <div id="produto6">
+            <img src="img/produto6.jpg" alt="produto6" id="imgProduto6">
+            <div id="tituloProduto6">
+                <p id="comprar6"><a href="https://wa.me/5531997941735?text=Quero%20comprar%20o%20Kit%20Barba%20Perfeita" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo6">KIT BARBA PERFEITA</p>
+            </div>
+        </div>
+
+        <div id="produto7">
+            <img src="img/produto7.jpeg" alt="produto7" id="imgProduto7">
+            <div id="tituloProduto7">
+                <p id="comprar7"><a href="https://wa.me/5531997941794?text=Quero%20comprar%20a%20Maquina%20de%20Corte" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo7">MAQUINA DE CORTE</p>
+            </div>
+        </div>
+
+        <div id="produto8">
+            <img src="img/produto8.jpeg" alt="produto8" id="imgProduto8">
+            <div id="tituloProduto8">
+                <p id="comprar8"><a href="https://wa.me/5531997941794?text=Quero%20comprar%20a%20Navalha" target="_blank">CLIQUE PARA COMPRAR</a></p>
+                <p id="titulo8">NAVALHA</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="localizacao">
+        <img src="img/fundoLocalizaçao.png" alt="fundoLocalizaçao" id="fundoLocalizaçao">
+        <div class="localizaçaoMaps">
+            <iframe id="localizaçaoMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.018632244131!2d-122.406417684681!3d37.78583417975769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f6c8b1eb%3A0x8f09014cdbb5b13b!2sTwitter!5e0!3m2!1sen!2sus!4v1614208274048!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border:20;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+            <img src="img/celular.png" alt="celular" id="celular">
+            <p id="tituloLocalizaçao">LOCALIZAÇÃO DA SUA BARBEARIA AQUI!</p>
+            <img src="img/traçoBarberPole.png" alt="traçoBarberPole" id="traçoBarberPole">
+            <p id="endereço">ENDEREÇO: O bairro do sua barbearia aqui.</p>
+            <p id="rua">RUA: Rua e número da sua barbearia aqui.</p>
+            <button id="wppLoc">Whatsapp</button>
+            <img src="img/whatsapp.png" alt="wppIconeLoc" id="wppIconeLoc">
+        </div>    
+    </div>
+
+     <!-- Modal Pessoa 1 -->
+<div id="modalPessoa1" class="modal">
+    <div class="modal-content">
+        <span class="close" data-modal="modalPessoa1">&times;</span>
+        <img src="/img/Equipe1" alt="imgequipeModal1" id="imgequipeModal1">
+        <div id="modal1">
+            <p id="nomeModal1">Nome: Registre seu nome aqui!</p>
+            <p id="habilidadeModal1">HABILIDADE: Registre sua habilidade aqui!</p>
+            <p id="caracteristicaModal1">CARACTERÍSTICA: Registre suas características em meio ao serviço!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pessoa 2 -->
+<div id="modalPessoa2" class="modal">
+    <div class="modal-content">
+        <span class="close" data-modal="modalPessoa2">&times;</span>
+        <img src="/img/Equipe2" alt="imgequipeModal2" id="imgequipeModal2">
+        <div id="modal2">
+            <p id="nomeModal2">Nome: Registre seu nome aqui!</p>
+            <p id="habilidadeModal2">HABILIDADE: Registre sua habilidade aqui!</p>
+            <p id="caracteristicaModal2">CARACTERÍSTICA: Registre suas características em meio ao serviço!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pessoa 3 -->
+<div id="modalPessoa3" class="modal">
+    <div class="modal-content">
+        <span class="close" data-modal="modalPessoa3">&times;</span>
+        <img src="/img/Equipe3" alt="imgequipeModal3" id="imgequipeModal3">
+        <div id="modal3">
+            <p id="nomeModal3">Nome: Registre seu nome aqui!</p>
+            <p id="habilidadeModal3">HABILIDADE: Registre sua habilidade aqui!</p>
+            <p id="caracteristicaModal3">CARACTERÍSTICA: Registre suas características em meio ao serviço!</p>
+        </div>
+    </div>
+</div>
+
+    <script src="oneScript.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,467 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(66, 66, 66);
+    overflow-x: hidden;
+}
+
+/* Estilo do cabeçalho */
+.cabeçalho {
+    background-color: rgb(161, 39, 65);
+    position: relative;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.cabeçalhoMidias {
+    display: flex;
+    gap: 15px;
+}
+
+.iconeInstagram,
+.iconeFacebook {
+    width: 25px;
+    cursor: pointer;
+    position: relative;
+    left: -99%;
+}
+
+.iconeWhatsapp {
+    width: 8vh;
+    position: relative;
+    left: -21vh;
+    cursor: pointer;
+    height: 4vh;
+}
+
+.txtCabeçalho {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: relative;
+    left: 40%;
+}
+
+/* Estilo da navegação */
+.navegaçao {
+    background-color: rgb(34, 34, 70);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10%;
+    position: relative;
+}
+
+.logoBarber {
+    width: 12%;
+    height: auto;
+}
+
+.navegaçao a {
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo do slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 15vh auto;
+    overflow: hidden;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -16vh;
+}
+
+.mySlides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mySlides.active {
+    left: 0;
+    opacity: 1;
+}
+
+.mySlides.exit {
+    left: -100%;
+    opacity: 0;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo dos modais */
+/* Estilo dos modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Escurece o fundo para cobrir toda a tela */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Ajusta a margem para centralizar o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    height: 45vh;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilo da seção Quem Somos */
+#tituloQuemSomos {
+    color: white;
+    position: absolute;
+    top: 95vh;
+    left: 87vh;
+    font-size: 6vh;
+}
+
+#txtQuemSomos1,
+#txtQuemSomos2,
+#txtQuemSomos3 {
+    color: white;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.6vh;
+}
+
+#txtQuemSomos1 {
+    top: 110vh;
+    height: 30vh;
+    width: 140vh;
+    left: 37vh;
+}
+
+#txtQuemSomos2 {
+    top: 125vh;
+    height: 30vh;
+    width: 140vh;
+    left: 37vh;
+}
+
+#txtQuemSomos3 {
+    top: 137vh;
+    height: 30vh;
+    width: 140vh;
+    left: 37vh;
+}
+
+/* Estilo da seção Equipe */
+#fundoEquipe {
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+    top: 180vh;
+    z-index: -1;
+}
+
+#tituloEquipe {
+    position: absolute;
+    top: 165vh;
+    z-index: 3;
+    left: 87vh;
+    color: white;
+    font-size: 6vh;
+}
+
+#imgEquipe1,
+#imgEquipe2,
+#imgEquipe3 {
+    position: absolute;
+    z-index: 3;
+    border-radius: 1vh;
+}
+
+#imgEquipe1 {
+    top: 185vh;
+    left: 30vh;
+}
+
+#imgEquipe2 {
+    top: 185vh;
+    left: 90vh;
+}
+
+#imgEquipe3 {
+    top: 185vh;
+    left: 150vh;
+}
+
+#btnPessoa1,
+#btnPessoa2,
+#btnPessoa3 {
+    position: absolute;
+    z-index: 6;
+    background-color: rgb(6, 6, 104);
+    border: solid 2px;
+    color: white;
+    border-radius: 1vh;
+    font-size: 2.4vh;
+    font-weight: bold;
+    height: 7vh;
+    cursor: pointer;
+}
+
+#btnPessoa1 {
+    top: 235vh;
+    left: 35vh;
+}
+
+#btnPessoa2 {
+    top: 235vh;
+    left: 95vh;
+}
+
+#btnPessoa3 {
+    top: 235vh;
+    left: 155vh;
+}
+
+/* Estilo da seção Localização */
+#fundoLocSobre {
+    position: absolute;
+    top: 140vh;
+    width: 100%;
+    height: 50vh;
+}
+
+#logoBarberSobre {
+    position: absolute;
+    top: 136vh;
+    width: 33vh;
+    left: 27vh;
+}
+
+#tituloLoc {
+    position: absolute;
+    top: 120vh;
+    z-index: 4;
+    color: white;
+    left: 75vh;
+}
+
+#localizaçaoMap {
+    position: absolute;
+    top: 146vh;
+    height: 35vh;
+    width: 62vh;
+    left: 97.6vh;
+    border-radius: 1vh;
+    border: solid 4px white;
+}
+
+#endereço,
+#rua {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+#endereço {
+    position: absolute;
+    top: 165vh;
+    z-index: 5;
+    left: 15vh;
+    font-size: 2.7vh;
+}
+
+#rua {
+    position: absolute;
+    top: 171vh;
+    z-index: 5;
+    left: 15vh;
+    font-size: 2.7vh;
+}
+
+#wppLoc {
+    position: absolute;
+    top: 179vh;
+    z-index: 5;
+    left: 35vh;
+    color: white;
+    background-color: green;
+    border-radius: 1vh;
+    border: solid 2px;
+    padding: 0 5px 0 60px;
+    height: 6vh;
+    font-size: 2.2vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#wppIconeLoc {
+    position: absolute;
+    top: 180vh;
+    width: 10vh;
+    left: 35vh;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#imgComputador {
+    position: absolute;
+    top: 138vh;
+    left: 85vh;
+}
+
+#imgequipeModal1{
+    position: absolute;
+    width: 22vh;
+    left: 57vh;
+    top: 30vh;
+}
+
+#nomeModal1{
+    position: absolute;
+    top: 33vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#habilidadeModal1{
+    position: absolute;
+    top: 40.5vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#caracteristicaModal1{
+    position: absolute;
+    top: 48vh;
+    left: 82vh;
+    width: 60vh;
+    font-weight: bold;
+
+}
+
+#imgequipeModal2{
+    position: absolute;
+    width: 22vh;
+    left: 57vh;
+    top: 30vh;
+}
+
+#nomeModal2{
+    position: absolute;
+    top: 33vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#habilidadeModal2{
+    position: absolute;
+    top: 40.5vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#caracteristicaModal2{
+    position: absolute;
+    top: 48vh;
+    left: 82vh;
+    width: 60vh;
+    font-weight: bold;
+
+}
+
+#imgequipeModal3{
+    position: absolute;
+    width: 22vh;
+    left: 57vh;
+    top: 30vh;
+}
+
+#nomeModal3{
+    position: absolute;
+    top: 33vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#habilidadeModal3{
+    position: absolute;
+    top: 40.5vh;
+    left: 82vh;
+    font-weight: bold;
+}
+
+#caracteristicaModal3{
+    position: absolute;
+    top: 48vh;
+    left: 82vh;
+    width: 60vh;
+    font-weight: bold;
+
+}
